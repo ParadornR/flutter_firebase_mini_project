@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
                   ),
                   Expanded(
                     child: Image.network(
-                      'sdasa',
+                      '',
                       fit: BoxFit.cover,
                       loadingBuilder: (context, child, loadingProgress) {
                         if (loadingProgress == null) return child;

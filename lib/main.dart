@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_mini_project/app/ui/add_menu.dart';
 import 'package:flutter_firebase_mini_project/app/ui/home.dart';
 
 void main() {
@@ -10,6 +11,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: ThemeData(), home: Home());
+    return MaterialApp(theme: ThemeData(), home: AddMenu());
   }
 }
