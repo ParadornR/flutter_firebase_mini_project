@@ -37,7 +37,7 @@ class Home extends StatelessWidget {
                         context,
                         MaterialPageRoute<void>(
                           builder:
-                              (BuildContext context) => Detail(),
+                              (BuildContext context) => Detail(data :data),
                         ),
                       );
                     },
