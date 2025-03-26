@@ -39,6 +39,7 @@ class _AddMenuState extends State<AddMenu> {
         'ingredients': ingredients,
         'url': url,
       });
+      Navigator.pop(context);
       log('เพิ่มข้อมูล');
     } else {
       ScaffoldMessenger.of(
