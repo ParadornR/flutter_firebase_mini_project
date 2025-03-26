@@ -36,8 +36,7 @@ class Home extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute<void>(
-                          builder:
-                              (BuildContext context) => Detail(data :data),
+                          builder: (BuildContext context) => Detail(data : data ,id: docs[index].id,),
                         ),
                       );
                     },
@@ -89,10 +88,12 @@ class Home extends StatelessWidget {
                                 loadingProgress,
                               ) {
                                 if (loadingProgress == null) return child;
-                                return CircularProgressIndicator();
+                                return Center(
+                                  child: CircularProgressIndicator(),
+                                );
                               },
                               errorBuilder: (context, error, stackTrace) {
-                                return Icon(Icons.error);
+                                return Center(child: Icon(Icons.error));
                               },
                             ),
                           ),
