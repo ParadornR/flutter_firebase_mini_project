@@ -1,13 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
+class Home extends StatelessWidget {
+ Home({super.key});
+   // collection users
+  final users = FirebaseFirestore.instance.collection('users');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
