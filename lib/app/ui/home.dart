@@ -51,7 +51,7 @@ class Home extends StatelessWidget {
                           children: [
                             Text(data["chef"], style: TextStyle(fontSize: 14)),
                             Text(
-                              data["name"],
+                              data["menu"],
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class Home extends StatelessWidget {
                       ),
                       Expanded(
                         child: Image.network(
-                          '',
+                          data["url"],
                           fit: BoxFit.cover,
                           loadingBuilder: (context, child, loadingProgress) {
                             if (loadingProgress == null) return child;
@@ -90,7 +90,7 @@ class Home extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute<void>(
-              builder: (BuildContext context) => AddMenu(),
+              builder: (BuildContext context) => AddMenu(menu: menu),
             ),
           );
         },
